@@ -5,7 +5,7 @@ import org.springframework.stereotype.Component;
 import org.springframework.validation.Errors;
 import org.springframework.validation.Validator;
 
-import com.avm.zoocode.db.dto.UserDto;
+import com.avm.zoocode.service.dto.UserDto;
 import com.avm.zoocode.service.user.UserService;
 
 @Component

@@ -1,4 +1,4 @@
-package com.avm.zoocode.db.dto;
+package com.avm.zoocode.service.dto;
 
 import java.sql.Date;
 

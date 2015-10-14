@@ -1,6 +1,8 @@
-package com.avm.zoocode.db.entity;
+package com.avm.zoocode.service.dto;
 
 import org.springframework.security.core.authority.AuthorityUtils;
+
+import com.avm.zoocode.db.entity.User;
 
 public class UserDetailsExt extends org.springframework.security.core.userdetails.User {
 	/**

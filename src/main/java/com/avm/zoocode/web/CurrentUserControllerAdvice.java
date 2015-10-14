@@ -4,7 +4,7 @@ import org.springframework.security.core.Authentication;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ModelAttribute;
 
-import com.avm.zoocode.db.entity.UserDetailsExt;
+import com.avm.zoocode.service.dto.UserDetailsExt;
 
 @ControllerAdvice
 public class CurrentUserControllerAdvice {

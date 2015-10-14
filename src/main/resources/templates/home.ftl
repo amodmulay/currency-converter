@@ -1,5 +1,5 @@
 <#-- @ftlvariable name="_csrf" type="org.springframework.security.web.csrf.CsrfToken" -->
-<#-- @ftlvariable name="currentUser" type="java.util.List<com.avm.zoocode.db.entity.UserDetailsExt" -->
+<#-- @ftlvariable name="currentUser" type="java.util.List<com.avm.zoocode.service.dto.UserDetailsExt" -->
 <!DOCTYPE html>
 <html lang="en">
 <head>

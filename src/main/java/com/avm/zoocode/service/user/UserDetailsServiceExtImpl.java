@@ -6,7 +6,7 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
 import com.avm.zoocode.db.entity.User;
-import com.avm.zoocode.db.entity.UserDetailsExt;
+import com.avm.zoocode.service.dto.UserDetailsExt;
 
 @Service
 public class UserDetailsServiceExtImpl implements UserDetailsService {

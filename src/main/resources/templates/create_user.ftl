@@ -1,5 +1,5 @@
 <#-- @ftlvariable name="_csrf" type="org.springframework.security.web.csrf.CsrfToken" -->
-<#-- @ftlvariable name="userDto" type="com.avm.zoocode.db.dto.UserDto" -->
+<#-- @ftlvariable name="userDto" type="com.avm.zoocode.service.dto.UserDto" -->
 <#import "/spring.ftl" as spring>
 <!DOCTYPE html>
 <html lang="en">

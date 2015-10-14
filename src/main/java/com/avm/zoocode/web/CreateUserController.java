@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.avm.zoocode.db.dto.UserDto;
+import com.avm.zoocode.service.dto.UserDto;
 import com.avm.zoocode.service.user.UserService;
 import com.avm.zoocode.validator.CreateUserFomValidator;
 

@@ -8,9 +8,9 @@ import org.springframework.data.domain.Sort;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
-import com.avm.zoocode.db.dto.UserDto;
 import com.avm.zoocode.db.entity.User;
 import com.avm.zoocode.db.repository.UserRepository;
+import com.avm.zoocode.service.dto.UserDto;
 
 @Service
 public class UserServiceImpl implements UserService {
