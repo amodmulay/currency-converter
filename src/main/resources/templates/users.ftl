@@ -19,14 +19,17 @@
     <thead>
     <tr>
         <th>E-mail</th>
-        <th>Role</th>
     </tr>
     </thead>
     <tbody>
     <#list users as user>
     <tr>
         <td><a href="/user/${user.id}">${user.email}</a></td>
-        <td>${user.role}</td>
+        <td><a href="/user/${user.id}">${user.birthDate}</a></td>
+        <td><a href="/user/${user.id}">${user.street}</a></td>
+        <td><a href="/user/${user.id}">${user.city}</a></td>
+        <td><a href="/user/${user.id}">${user.country}</a></td>
+        <td><a href="/user/${user.id}">${user.zipCode}</a></td>
     </tr>
     </#list>
     </tbody>

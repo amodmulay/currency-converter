@@ -38,6 +38,12 @@ public class UserServiceImpl implements UserService {
 	        User user = new User();
 	        user.setEmail(userDto.getEmail());
 	        user.setPasswordHash(new BCryptPasswordEncoder().encode(userDto.getPassword()));
+	        user.setBirthDate(userDto.getBirthDate());
+	        user.setStreet(userDto.getStreet());
+	        user.setCity(userDto.getCity());
+	        user.setZipCode(userDto.getZipCode());
+	        user.setCountry(userDto.getCountry());
+	        
 	        return userRepository.save(user);
 	    }
 }

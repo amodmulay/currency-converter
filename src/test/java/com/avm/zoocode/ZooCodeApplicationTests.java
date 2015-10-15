@@ -11,7 +11,7 @@ import org.springframework.test.context.web.WebAppConfiguration;
  *
  */
 @RunWith(SpringJUnit4ClassRunner.class)
-@SpringApplicationConfiguration(classes = com.avm.zoocode.ZooplusCodeApplication.class)
+@SpringApplicationConfiguration(classes = com.avm.zoocode.ZooCodeApplication.class)
 @WebAppConfiguration
 public class ZooCodeApplicationTests {
 

@@ -1,4 +1,4 @@
-package com.avm.zoocode.db.config;
+package com.avm.zoocode.db.config.security;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.security.SecurityProperties;

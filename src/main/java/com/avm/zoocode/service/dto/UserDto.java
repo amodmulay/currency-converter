@@ -1,32 +1,33 @@
 package com.avm.zoocode.service.dto;
 
-import java.sql.Date;
 
-import org.hibernate.validator.constraints.NotEmpty;
+import java.util.Date;
+
+import javax.validation.constraints.NotNull;
 
 public class UserDto {
-	@NotEmpty
-	private String email="";
+	@NotNull
+	private String email = "";
 
-	@NotEmpty
-	private String password;
+	@NotNull
+	private String password = "";
 
-	@NotEmpty
-	private String passwordRepeated;
+	@NotNull
+	private String passwordRepeated = "";
 
-	@NotEmpty
-	private Date birthDate;
+	@NotNull
+	private Date birthDate = new Date();
 
-	@NotEmpty
-	private String street;
+	@NotNull
+	private String street = "";
 
-	@NotEmpty
+	@NotNull
 	private String zipCode;
 
-	@NotEmpty
+	@NotNull
 	private String city;
 
-	@NotEmpty
+	@NotNull
 	private String country;
 
 	public String getEmail() {
@@ -57,8 +58,12 @@ public class UserDto {
 		return birthDate;
 	}
 
-	public void setDate(Date birthDate) {
+	public void setBirthDate(Date birthDate) {
 		this.birthDate = birthDate;
+	}
+
+	public Date getBirthDate() {
+		return birthDate;
 	}
 
 	public String getStreet() {
@@ -92,6 +97,5 @@ public class UserDto {
 	public void setCountry(String country) {
 		this.country = country;
 	}
-	
 
 }

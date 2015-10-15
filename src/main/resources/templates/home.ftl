@@ -7,10 +7,13 @@
     <title>Home page</title>
 </head>
 <body>
+<div>
+<h1>Welcome to Currency Converter Demonstrator</h1>
+</div>
 <nav role="navigation">
     <ul>
     <#if !currentUser??>
-        <li><a href="/login">Log in</a></li>
+        <li><a href="/login">Registered users Log in here</a></li>
     </#if>
     <#if currentUser??>
         <li>
@@ -21,8 +24,7 @@
         </li>
         <li><a href="/user/${currentUser.id}">View myself</a></li>
     </#if>
-        <li><a href="/user/create">Create a new user</a></li>
-        <li><a href="/users">View all users</a></li>
+        <li><a href="/create">Create an account</a></li>
     </ul>
 </nav>
 </body>

@@ -1,6 +1,6 @@
 package com.avm.zoocode.db.entity;
 
-import java.sql.Date;
+import java.util.Date;
 import java.util.Set;
 
 import javax.persistence.Column;
@@ -11,7 +11,6 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
-import javax.validation.constraints.Null;
 import javax.validation.constraints.Size;
 
 @Entity
@@ -28,19 +27,19 @@ public class User {
 	@Column(name = "password_hash", nullable = false)
 	private String passwordHash;
 	
-	@Column(name="birth_date", nullable = false)
-	private Date date;
+	@Column(name="birth_date", nullable = true)
+	private Date birthDate;
 	
 	@Column(name="street", nullable =  false)
 	private String street;
 	
-	@Column(name="zip_code", nullable =  false)
+	@Column(name="zip_code", nullable =  true)
 	private String zipCode;
 	
-	@Column(name="city", nullable =  false)
+	@Column(name="city", nullable =  true)
 	private String city;
 	
-	@Column(name="country", nullable =  false)
+	@Column(name="country", nullable =  true)
 	private String country;
 	
 	
@@ -75,12 +74,12 @@ public class User {
 //		return "USER";
 //	}
 
-	public Date getDate() {
-		return date;
+	public Date getBirthDate() {
+		return birthDate;
 	}
 
-	public void setDate(Date date) {
-		this.date = date;
+	public void setBirthDate(Date date) {
+		this.birthDate = date;
 	}
 
 	public String getStreet() {
