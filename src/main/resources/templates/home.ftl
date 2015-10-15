@@ -1,5 +1,7 @@
 <#-- @ftlvariable name="_csrf" type="org.springframework.security.web.csrf.CsrfToken" -->
 <#-- @ftlvariable name="currentUser" type="java.util.List<com.avm.zoocode.service.dto.UserDetailsExt" -->
+<#-- @ftlvariable name="rates" type="java.util.Map<com.avm.zoocode.service.dto.currency.ExchangeRateDto" -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -27,5 +29,11 @@
         <li><a href="/create">Create an account</a></li>
     </ul>
 </nav>
+
+<div>
+<#list rates.rates?keys as key> 
+    <p>${key} = ${rates.rates[key]} </p>
+</#list> 
+</div>
 </body>
 </html>

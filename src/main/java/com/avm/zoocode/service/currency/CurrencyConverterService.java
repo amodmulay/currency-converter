@@ -1,8 +1,11 @@
 package com.avm.zoocode.service.currency;
 
-import com.avm.zoocode.webservice.rest.json.ExchangeRate;
+import com.avm.zoocode.service.dto.currency.ExchangeRateDto;
+import com.avm.zoocode.service.dto.currency.ExchangeRequestDto;
 
 public interface CurrencyConverterService {
 	
-	public ExchangeRate getAllCurrencyRates();
+	public ExchangeRateDto getAllCurrencyRates();
+	
+	public ExchangeRequestDto getExchangeRate(String fromCurrency, String toCurrency);
 } 
