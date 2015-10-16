@@ -2,7 +2,7 @@ language: java
 jdk:
   - oraclejdk8
 
-deploy:
-  provider: heroku
-  api_key: "e8387600-df41-48b0-b30d-96ed1ec32c20"
-  app: Zoo Project
+#deploy:
+ # provider: heroku
+  #api_key: "e8387600-df41-48b0-b30d-96ed1ec32c20"
+  #app: Zoo Project
