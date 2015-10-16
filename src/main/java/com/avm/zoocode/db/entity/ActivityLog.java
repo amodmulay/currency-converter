@@ -1,5 +1,7 @@
 package com.avm.zoocode.db.entity;
 
+import java.util.Date;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -26,10 +28,13 @@ public class ActivityLog {
 	
 	@Column(name = "conversion_rate", nullable = false)
 	private Float conversionRate;
-	
 
 	@Column(name = "coversion_value", nullable = false)
 	private Float coversionValue;
+	
+	@Column(name = "query_date", nullable = false)
+	private Date queryDate;
+	
 	
 	public Long getId() {
 		return id;

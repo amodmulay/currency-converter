@@ -7,5 +7,5 @@ public interface CurrencyConverterService {
 	
 	public ExchangeRateDto getAllCurrencyRates();
 	
-	public ExchangeRequestDto getExchangeRate(String fromCurrency, String toCurrency);
+	public ExchangeRequestDto getExchangeRate(String fromCurrency, String toCurrency, Float changeValue);
 } 

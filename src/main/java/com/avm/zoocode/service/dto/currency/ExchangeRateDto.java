@@ -9,7 +9,7 @@ public class ExchangeRateDto {
 
 	private Date date;
 
-	private Map<String, Object> rates;
+	private Map<String, Float> rates;
 
 	public String getBase() {
 		return base;
@@ -27,11 +27,11 @@ public class ExchangeRateDto {
 		this.date = date;
 	}
 
-	public Map<String, Object> getRates() {
+	public Map<String, Float> getRates() {
 		return rates;
 	}
 
-	public void setRates(Map<String, Object> rates) {
+	public void setRates(Map<String, Float> rates) {
 		this.rates = rates;
 	}
 }

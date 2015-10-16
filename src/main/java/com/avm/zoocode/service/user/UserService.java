@@ -7,7 +7,7 @@ import com.avm.zoocode.db.entity.User;
 import com.avm.zoocode.service.dto.UserDto;
 
 public interface UserService {
-	Optional<User> getUserById(long id);
+	Optional<User> getUserById(Integer id);
 
 	Optional<User> getUserByEmail(String email);
 

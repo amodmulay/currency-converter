@@ -20,7 +20,7 @@ public class UserDetailsExt extends org.springframework.security.core.userdetail
 		return user;
 	}
 
-	public Long getId() {
+	public Integer getId() {
 		return user.getId();
 	}
 	
