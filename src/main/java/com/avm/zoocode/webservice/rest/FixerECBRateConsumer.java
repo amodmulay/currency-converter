@@ -8,7 +8,7 @@ import com.avm.zoocode.webservice.rest.json.ExchangeRate;
 @Component
 public class FixerECBRateConsumer implements RestRateConsumer<ExchangeRate> {
 
-	public static void main(String[] args) {
+	public static void main(String args) {
 		RestTemplate restTemplate = new RestTemplate();
 		ExchangeRate quote = restTemplate.getForObject("http://api.fixer.io/latest?base=EUR&symbols=USD,GBP",
 				ExchangeRate.class);
