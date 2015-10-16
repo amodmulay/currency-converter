@@ -12,6 +12,11 @@
 <div>
 <h1>Welcome to Currency Converter Demonstrator</h1>
 </div>
+
+<table style="width:100%">
+<tr>
+<td>
+<div>
 <nav role="navigation">
     <ul>
     <#if !currentUser??>
@@ -29,11 +34,16 @@
         <li><a href="/create">Create an account</a></li>
     </ul>
 </nav>
-
+</div>
+</td>
+<td height="100">
 <div>
 <#list rates.rates?keys as key> 
     <p>${key} = ${rates.rates[key]} </p>
 </#list> 
 </div>
+</td>
+</tr>
+</table>
 </body>
 </html>

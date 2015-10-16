@@ -34,5 +34,4 @@ public class ExchangeRateDto {
 	public void setRates(Map<String, Object> rates) {
 		this.rates = rates;
 	}
-
 }
