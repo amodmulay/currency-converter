@@ -10,7 +10,7 @@ public class ExchangeRequestDto {
 
 	private Float exchangeRate;
 
-	private Float changeValue;
+	private Float valueToConvert;
 
 	private Float covertedValue;
 
@@ -40,14 +40,6 @@ public class ExchangeRequestDto {
 		this.exchangeRate = exchangeRate;
 	}
 
-	public Float getChangeValue() {
-		return changeValue;
-	}
-
-	public void setChangeValue(Float changeValue) {
-		this.changeValue = changeValue;
-	}
-
 	public Float getCovertedValue() {
 		return covertedValue;
 	}
@@ -62,6 +54,14 @@ public class ExchangeRequestDto {
 
 	public void setRateDate(Date rateDate) {
 		this.rateDate = rateDate;
+	}
+
+	public Float getValueToConvert() {
+		return valueToConvert;
+	}
+
+	public void setValueToConvert(Float valueToConvert) {
+		this.valueToConvert = valueToConvert;
 	}
 
 }

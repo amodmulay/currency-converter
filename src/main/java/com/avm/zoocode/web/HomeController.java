@@ -5,16 +5,16 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.avm.zoocode.webservice.rest.FixerECBRateConsumer;
+import com.avm.zoocode.service.currency.CurrencyConverterService;
 
 @Controller
 public class HomeController {
 
 	@Autowired
-	FixerECBRateConsumer fixerECBRateConsumer;
+	CurrencyConverterService converterService;
 	@RequestMapping("/")
 	public ModelAndView getHomePage() {
-		return new ModelAndView("home", "rates",fixerECBRateConsumer.getAllExchangeRates() );
+		return new ModelAndView("home", "rates",converterService.getAllCurrencyRates() );
 		
 	}
 
