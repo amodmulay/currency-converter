@@ -61,7 +61,7 @@
 <label for="covertedValueLable">Exchange Value from ${convert.fromCurreny} to ${convert.toCurrency} </label>
 <label for="covertedValue">${convert.covertedValue}</label>
 </br>
-<label for="covertedValueDate">Calculated on the basis of rates available on: ${convert.rateDate}</label>
+<label for="covertedValueDate">Calculated on the basis of rates available on: ${.now}</label>
 </div>
 </#if>
 </br>
