@@ -33,7 +33,7 @@ public class UserDto {
 	@NotNull
 	private String country;
 	
-	private List<ActivityLog> activityLog;
+	private List<ActivityLog> activityLog; //Use DTO here
 
 	public String getEmail() {
 		return email;

@@ -57,7 +57,6 @@ public class UserServiceImpl implements UserService {
 			dto.setZipCode(user.getZipCode());
 			Set actvity = user.getActivityLogs();
 			List activityList = new ArrayList(actvity);
-			Collections.sort(activityList);
 			dto.setActivityLog(activityList);
 			return dto;
 		}

@@ -17,6 +17,10 @@
 </head>
 <body>
 <div>
+<h1>Currency Converter :: Spring Boot + Spring MVC + JPA + Freemarker</h1>
+</div>
+</br>
+<div>
      <a href="/">Home Page</a>
 </div>
 

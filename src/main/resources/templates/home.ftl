@@ -10,8 +10,9 @@
 </head>
 <body>
 <div>
-<h1>Welcome to Currency Converter Demonstrator</h1>
+<h1>Currency Converter :: Spring Boot + Spring MVC + JPA + Freemarker</h1>
 </div>
+</br>
 
 <table style="width:100%">
 <tr>
@@ -29,9 +30,11 @@
                 <button type="submit">Log out</button>
             </form>
         </li>
-        <li><a href="/user/${currentUser.id}">View myself</a></li>
+        <li><a href="/converter">Currency Converter</a></li>
     </#if>
+    <#if !currentUser??>
         <li><a href="/create">Create an account</a></li>
+    </#if>    
     </ul>
 </nav>
 </div>

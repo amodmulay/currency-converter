@@ -47,6 +47,10 @@ public class CurrencyConverterServiceImpl implements CurrencyConverterService {
 		Date date = exchangeRate.getDate();
 		Map<String, Float> rates = exchangeRate.getRates();
 
+		if (rates.isEmpty()) {
+			rates.put(toCurrency, 1f); // used only when both currencies that
+										// are selected are same
+		}
 		Float value = rates.get(toCurrency) * valueToConvert;
 
 		ExchangeRequestDto exchangeDto = new ExchangeRequestDto();

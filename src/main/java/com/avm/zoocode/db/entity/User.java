@@ -10,6 +10,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.OneToMany;
+import javax.persistence.OrderBy;
 import javax.persistence.Table;
 import javax.validation.constraints.Size;
 
@@ -42,10 +43,9 @@ public class User {
 	@Column(name="country", nullable =  true)
 	private String country;
 	
-	
-	
 	@OneToMany
 	@JoinColumn(name = "user_id")
+	@OrderBy("query_date DESC")
 	@Size(max=10)
 	private Set<ActivityLog> activityLogs;
 

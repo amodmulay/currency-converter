@@ -47,6 +47,6 @@ public class CreateUserController {
 			bindingResult.reject("email.exists", "Email already registered");
 			return "create_user";
 		}
-		return "redirect:/converter";
+		return "redirect:/login";
 	}
 }
