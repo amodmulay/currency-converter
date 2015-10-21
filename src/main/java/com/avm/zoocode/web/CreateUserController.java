@@ -19,14 +19,12 @@ import com.avm.zoocode.validator.CreateUserFomValidator;
 
 @Controller
 public class CreateUserController {
-	private final UserService userService;
-	private final CreateUserFomValidator createUserFomValidator;
-
+	
 	@Autowired
-	public CreateUserController(UserService userService, CreateUserFomValidator CreateUserFomValidator) {
-		this.userService = userService;
-		this.createUserFomValidator = CreateUserFomValidator;
-	}
+	private UserService userService;
+	
+	@Autowired
+	private CreateUserFomValidator createUserFomValidator;
 
 	@InitBinder("userDto")
 	public void initBinder(WebDataBinder binder) {
@@ -49,6 +47,6 @@ public class CreateUserController {
 			bindingResult.reject("email.exists", "Email already registered");
 			return "create_user";
 		}
-		return "redirect:/users";
+		return "redirect:/converter";
 	}
 }

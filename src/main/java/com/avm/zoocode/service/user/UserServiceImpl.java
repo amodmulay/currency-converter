@@ -1,10 +1,12 @@
 package com.avm.zoocode.service.user;
 
-import java.util.Collection;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 import java.util.Optional;
+import java.util.Set;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.Sort;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
@@ -19,18 +21,14 @@ public class UserServiceImpl implements UserService {
 		private UserRepository userRepository;
 
 	    @Override
-	    public Optional<User> getUserById(Integer id) {
-	        return Optional.ofNullable(userRepository.findOne(id));
-	    }
-
-	    @Override
-	    public Optional<User> getUserByEmail(String email) {
-	        return userRepository.findUserByEmail(email);
-	    }
-
-	    @Override
-	    public Collection<User> getAllUsers() {
-	        return userRepository.findAll(new Sort("email"));
+	    public Optional<UserDto> getUserByEmail(String email) {
+	    	Optional<User> optional = userRepository.findUserByEmail(email);
+	    	if(optional.isPresent())
+	    	{
+	    		return Optional.of(convert(optional.get()));
+	    	}
+	    	else
+	        return Optional.ofNullable(null);
 	    }
 
 	    @Override
@@ -46,4 +44,21 @@ public class UserServiceImpl implements UserService {
 	        
 	        return userRepository.save(user);
 	    }
+	    
+	    @SuppressWarnings({ "rawtypes", "unchecked" })
+		private UserDto convert(User user) {
+
+			UserDto dto = new UserDto();
+			dto.setBirthDate(user.getBirthDate());
+			dto.setCity(user.getCity());
+			dto.setCountry(user.getCity());
+			dto.setEmail(user.getEmail());
+			dto.setStreet(user.getStreet());
+			dto.setZipCode(user.getZipCode());
+			Set actvity = user.getActivityLogs();
+			List activityList = new ArrayList(actvity);
+			Collections.sort(activityList);
+			dto.setActivityLog(activityList);
+			return dto;
+		}
 }

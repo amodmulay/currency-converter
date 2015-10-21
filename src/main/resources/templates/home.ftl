@@ -36,6 +36,7 @@
 </nav>
 </div>
 </td>
+<#--
 <td height="100">
 <div>
 <#list rates.rates?keys as key> 
@@ -43,6 +44,7 @@
 </#list> 
 </div>
 </td>
+-->
 </tr>
 </table>
 </body>

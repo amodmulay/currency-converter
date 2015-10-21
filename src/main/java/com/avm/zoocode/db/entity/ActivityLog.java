@@ -32,9 +32,27 @@ public class ActivityLog {
 	@Column(name = "coversion_value", nullable = false)
 	private Float coversionValue;
 	
+	@Column(name = "converted_value", nullable = false)
+	private Float convertedValue;
+	
 	@Column(name = "query_date", nullable = false)
 	private Date queryDate;
 	
+	public Float getConvertedValue() {
+		return convertedValue;
+	}
+
+	public void setConvertedValue(Float convertedValue) {
+		this.convertedValue = convertedValue;
+	}
+
+	public Date getQueryDate() {
+		return queryDate;
+	}
+
+	public void setQueryDate(Date queryDate) {
+		this.queryDate = queryDate;
+	}
 	
 	public Long getId() {
 		return id;

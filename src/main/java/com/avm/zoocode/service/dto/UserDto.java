@@ -2,8 +2,11 @@ package com.avm.zoocode.service.dto;
 
 
 import java.util.Date;
+import java.util.List;
 
 import javax.validation.constraints.NotNull;
+
+import com.avm.zoocode.db.entity.ActivityLog;
 
 public class UserDto {
 	@NotNull
@@ -29,6 +32,8 @@ public class UserDto {
 
 	@NotNull
 	private String country;
+	
+	private List<ActivityLog> activityLog;
 
 	public String getEmail() {
 		return email;
@@ -98,4 +103,11 @@ public class UserDto {
 		this.country = country;
 	}
 
+	public List<ActivityLog> getActivityLog() {
+		return activityLog;
+	}
+
+	public void setActivityLog(List<ActivityLog> activityLog) {
+		this.activityLog = activityLog;
+	}
 }

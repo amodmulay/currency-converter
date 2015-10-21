@@ -2,6 +2,7 @@
 <#-- @ftlvariable name="currentUser" type="java.util.List<com.avm.zoocode.service.dto.UserDetailsExt" -->
 <#-- @ftlvariable name="convert" type="com.avm.zoocode.service.dto.currency.ExchangeRequestDto" -->
 <#-- @ftlvariable name="rates" type="java.util.Map<com.avm.zoocode.service.dto.currency.ExchangeRateDto" -->
+<#-- @ftlvariable name="activity" type="java.util.List<com.avm.zoocode.db.entity.ActivityLog" -->
 <#import "/spring.ftl" as spring>
 <!DOCTYPE html>
 <html lang="en">
@@ -22,9 +23,8 @@
                 <button type="submit">Log out</button>
             </form>
         </li>
-        <li><a href="/user/${currentUser.id}">View myself</a></li>
+        <li><a href="/home">Home Page</a></li>
     </#if>
-        <li><a href="/create">Create an account</a></li>
     </ul>
 </nav> 
 
@@ -67,6 +67,11 @@
 </br>
 <button type="submit">Convert</button>
 </form>
+<#if activity??>
+ <#list activity as log>
+        <li>${log}</li>
+  </#list>
+</#if>
 <@spring.bind "convert" />
 <#if spring.status.error>
 <ul>

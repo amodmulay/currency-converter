@@ -1,5 +1,7 @@
 package com.avm.zoocode.validator;
 
+import java.util.Optional;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.validation.Errors;
@@ -33,7 +35,8 @@ public class CreateUserFomValidator implements Validator {
     }
 
     private void validateEmail(Errors errors, UserDto userDto) {
-        if (userService.getUserByEmail(userDto.getEmail()).isPresent()) {
+		Optional<UserDto> optional = userService.getUserByEmail(userDto.getEmail());
+        if (optional.isPresent()) {
             errors.reject("email.exists", "User with this email already exists");
         }
     }

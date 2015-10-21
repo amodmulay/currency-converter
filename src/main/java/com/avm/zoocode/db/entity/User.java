@@ -19,7 +19,7 @@ public class User {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "id", nullable = false, updatable = false)
-	private Integer id;
+	private Long id;
 
 	@Column(name = "email", nullable = false, unique = true)
 	private String email;
@@ -49,7 +49,7 @@ public class User {
 	@Size(max=10)
 	private Set<ActivityLog> activityLogs;
 
-	public Integer getId() {
+	public Long getId() {
 		return id;
 	}
 
