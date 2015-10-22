@@ -44,6 +44,20 @@ public class CurrencyConverterServiceImpl implements CurrencyConverterService {
 			final Float valueToConvert) {
 
 		ExchangeRate exchangeRate = fixerECBRateConsumer.getExchangeRate(fromCurrency, toCurrency);
+
+		return calculate(exchangeRate, fromCurrency, toCurrency, valueToConvert);
+	}
+
+	@Override
+	public ExchangeRequestDto getHistoricalConvertedValue(final String fromCurrency, final String toCurrency,
+			final Float valueToConvert, final Date date) {
+		ExchangeRate exchangeRate = fixerECBRateConsumer.getHistoricalValue(fromCurrency, toCurrency, date);
+		return calculate(exchangeRate, fromCurrency, toCurrency, valueToConvert);
+	}
+
+	private ExchangeRequestDto calculate(final ExchangeRate exchangeRate, final String fromCurrency,
+			final String toCurrency, final Float valueToConvert) {
+
 		Date date = exchangeRate.getDate();
 		Map<String, Float> rates = exchangeRate.getRates();
 
@@ -51,6 +65,7 @@ public class CurrencyConverterServiceImpl implements CurrencyConverterService {
 			rates.put(toCurrency, 1f); // used only when both currencies that
 										// are selected are same
 		}
+
 		Float value = rates.get(toCurrency) * valueToConvert;
 
 		ExchangeRequestDto exchangeDto = new ExchangeRequestDto();

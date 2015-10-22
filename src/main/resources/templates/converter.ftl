@@ -7,8 +7,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <title>List of Users</title>
+     <meta charset="utf-8">
+    <title>Create a new user</title>
+    <meta charset="utf-8" />
+    <title>ZooCode</title>
+
+    <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+    <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0-rc1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0-rc1/css/bootstrap.min.css">
 </head>
 <body>
 <div>
@@ -22,7 +30,7 @@
     </#if>
     <#if currentUser??>
         <li>
-            <form action="/logout" method="post">
+            <form action="/" method="post">
             <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
                 <button type="submit">Log out</button>
             </form>
@@ -58,6 +66,10 @@
 <label for="valueToConvert">Amount to Covert</label>
 <input type="text" name="valueToConvert" id="valueToConvert"  required/>
 </div>
+<div>
+    <label for="rateDate">Date (Select for historical data)</label>
+    <input type="text" name="rateDate" id="rateDate"/>
+</div>
 
 <#if convert.covertedValue??>
 </br>
@@ -71,9 +83,23 @@
 </br>
 <button type="submit">Convert</button>
 </form>
+<#-- Create constructor object -->
+<#assign objectConstructor = "freemarker.template.utility.ObjectConstructor"?new()>
+
+<#-- Call calendar constructor -->
+<#assign clock = objectConstructor("java.util.GregorianCalendar")>
+
+<#-- Call formatter constructor -->
+<#assign mmddyy = objectConstructor("java.text.SimpleDateFormat","MM/dd/yyyy hh:mm")>
+
+<#-- Call getTime method to return the date in milliseconds-->
+<#assign date = clock.getTime()>
+
+<#-- Call format method to pretty print the date -->
+<#assign now = mmddyy.format(date)>
 <#if activity??>
  <#list activity as log>
-        <li>${log}</li>
+        <li>Exchange Value from ${log.fromCurrency} to ${log.toCurrency} with rate ${log.conversionRate} on ${mmddyy.format(log.queryDate)} = ${log.convertedValue}</li>
   </#list>
 </#if>
 <@spring.bind "convert" />
@@ -84,5 +110,15 @@
     </#list>
 </ul>
 </#if>
+
+<script type="text/javascript">
+
+window.onload=function(){
+    //Datepicker for Date of Birth
+    $( "#rateDate" ).datepicker();
+};
+
+ </script>
+ 
 </body>
 </html>

@@ -323,7 +323,10 @@
 
 window.onload=function(){
     //Datepicker for Date of Birth
-    $( "#birthDate" ).datepicker();
+    $( "#birthDate" ).datepicker({
+      changeMonth: true,
+      changeYear: true
+    });
 };
 
  </script>

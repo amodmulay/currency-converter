@@ -44,7 +44,7 @@ public class CreateUserController {
 		try {
 			userService.create(userDto);
 		} catch (DataIntegrityViolationException e) {
-			bindingResult.reject("email.exists", "Email already registered");
+			bindingResult.reject("error.error", "Somthing went wrong!!!");
 			return "create_user";
 		}
 		return "redirect:/login";

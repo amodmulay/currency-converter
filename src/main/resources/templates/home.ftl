@@ -25,7 +25,7 @@
     </#if>
     <#if currentUser??>
         <li>
-            <form action="/logout" method="post">
+            <form action="/" method="post">
             <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
                 <button type="submit">Log out</button>
             </form>
