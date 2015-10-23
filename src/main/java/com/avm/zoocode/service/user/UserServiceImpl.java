@@ -1,7 +1,6 @@
 package com.avm.zoocode.service.user;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 import java.util.Optional;
 import java.util.Set;
@@ -33,16 +32,16 @@ public class UserServiceImpl implements UserService {
 
 	    @Override
 	    public User create(UserDto userDto) {
-	        User user = new User();
-	        user.setEmail(userDto.getEmail());
-	        user.setPasswordHash(new BCryptPasswordEncoder().encode(userDto.getPassword()));
-	        user.setBirthDate(userDto.getBirthDate());
-	        user.setStreet(userDto.getStreet());
-	        user.setCity(userDto.getCity());
-	        user.setZipCode(userDto.getZipCode());
-	        user.setCountry(userDto.getCountry());
-	        
-	        return userRepository.save(user);
+		User user = new User();
+		user.setEmail(userDto.getEmail());
+		user.setPasswordHash(new BCryptPasswordEncoder().encode(userDto.getPassword()));
+		user.setBirthDate(userDto.getBirthDate());
+		user.setStreet(userDto.getStreet());
+		user.setCity(userDto.getCity());
+		user.setZipCode(userDto.getZipCode());
+		user.setCountry(userDto.getCountry());
+
+		return userRepository.save(user);
 	    }
 	    
 	    @SuppressWarnings({ "rawtypes", "unchecked" })
