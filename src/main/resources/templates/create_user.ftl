@@ -5,7 +5,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>Create a new user</title>
+    <title>Currency Converter</title>
     <meta charset="utf-8" />
     <title>User Screen</title>
 

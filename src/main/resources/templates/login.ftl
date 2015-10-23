@@ -4,7 +4,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>Log in</title>
+    <title>Currency Converter</title>
 </head>
 <body>
 <div>
@@ -13,13 +13,11 @@
 </br>
 <nav role="navigation">
     <ul>
-        <li><a href="/">Home</a></li>
+        <li><a href="/">Home Page</a></li>
     </ul>
 </nav>
 
 <h1>Log in</h1>
-
-<p>You can use: demo@localhost / demo</p>
 
 <form role="form" action="/login" method="post">
 <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>

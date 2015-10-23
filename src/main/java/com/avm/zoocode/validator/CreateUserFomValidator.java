@@ -61,7 +61,7 @@ public class CreateUserFomValidator implements Validator {
 			cal.add(Calendar.YEAR, -10);
 			Date dateBefore10Years = cal.getTime();
 			if (userDto.getBirthDate().after(dateBefore10Years)) {
-				errors.reject("birtdate.invalidyoung", "You are less than years old? Correct your birthdate.");
+				errors.reject("birtdate.invalidyoung", "You are less than 10 years old? Correct your birthdate.");
 			}
 		}
 
