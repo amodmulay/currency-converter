@@ -13,7 +13,7 @@ import com.avm.zoocode.db.repository.ActivityLogRepository;
 import com.avm.zoocode.db.repository.UserRepository;
 import com.avm.zoocode.service.dto.currency.ExchangeRateDto;
 import com.avm.zoocode.service.dto.currency.ExchangeRequestDto;
-import com.avm.zoocode.webservice.rest.FixerECBRateConsumer;
+import com.avm.zoocode.websconsumer.rest.FixerECBRateConsumer;
 import com.avm.zoocode.webservice.rest.json.ExchangeRate;
 
 @Service

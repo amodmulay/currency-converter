@@ -1,4 +1,4 @@
-package com.avm.zoocode.webservice.rest;
+package com.avm.zoocode.websconsumer.rest;
 
 public interface RestRateConsumer<T> {
 	public T getAllExchangeRates();
