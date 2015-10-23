@@ -5,6 +5,8 @@
 <head>
     <meta charset="utf-8">
     <title>Currency Converter</title>
+        <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0-rc1/css/bootstrap.min.css">
 </head>
 <body>
 <div>

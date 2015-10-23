@@ -35,7 +35,7 @@
                 <button type="submit">Log out</button>
             </form>
         </li>
-        <li><a href="/home">Home Page</a></li>
+        <li><a href="/">Home Page</a></li>
     </#if>
     </ul>
 </nav> 
@@ -97,6 +97,9 @@
 
 <#-- Call format method to pretty print the date -->
 <#assign now = mmddyy.format(date)>
+</br>
+<label>Past activity</label>
+</br>
 <#if activity??>
  <#list activity as log>
         <li>Exchange Value from ${log.fromCurrency} to ${log.toCurrency} with rate ${log.conversionRate} on ${mmddyy.format(log.queryDate)} = ${log.convertedValue}</li>

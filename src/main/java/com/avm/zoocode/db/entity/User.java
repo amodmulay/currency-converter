@@ -12,10 +12,11 @@ import javax.persistence.JoinColumn;
 import javax.persistence.OneToMany;
 import javax.persistence.OrderBy;
 import javax.persistence.Table;
+import javax.persistence.UniqueConstraint;
 import javax.validation.constraints.Size;
 
 @Entity
-@Table(name = "user")
+@Table(name = "user", uniqueConstraints=@UniqueConstraint(columnNames = {"email"})) 
 public class User {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
