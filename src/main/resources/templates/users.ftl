@@ -4,6 +4,10 @@
 <head>
     <meta charset="utf-8">
     <title>List of Users</title>
+     <meta charset="utf-8">
+    <title>Currency Converter</title>
+        <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0-rc1/css/bootstrap.min.css">
 </head>
 <body>
 <div>
@@ -28,12 +32,12 @@
     <tbody>
     <#list users as user>
     <tr>
-        <td><a href="/user/${user.id}">${user.email}</a></td>
-        <td><a href="/user/${user.id}">${user.birthDate}</a></td>
-        <td><a href="/user/${user.id}">${user.street}</a></td>
-        <td><a href="/user/${user.id}">${user.city}</a></td>
-        <td><a href="/user/${user.id}">${user.country}</a></td>
-        <td><a href="/user/${user.id}">${user.zipCode}</a></td>
+        <td>${user.email}</td>
+        <td>${user.birthDate}</td>
+        <td>${user.street}</td>
+        <td>${user.city}</td>
+        <td>${user.country}</td>
+        <td>${user.zipCode}</td>
     </tr>
     </#list>
     </tbody>
